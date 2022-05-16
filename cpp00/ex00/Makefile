@@ -6,11 +6,11 @@
 #    By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/17 00:46:02 by sarchoi           #+#    #+#              #
-#    Updated: 2022/05/17 00:51:23 by sarchoi          ###   ########seoul.kr   #
+#    Updated: 2022/05/17 01:50:59 by sarchoi          ###   ########seoul.kr   #
 #                                                                              #
 # **************************************************************************** #
 
-.PHONY: all clean fclean re test
+.PHONY: all clean fclean re $(NAME)
 
 NAME = megaphone
 
