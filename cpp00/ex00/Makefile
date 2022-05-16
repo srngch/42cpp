@@ -6,7 +6,7 @@
 #    By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/17 00:46:02 by sarchoi           #+#    #+#              #
-#    Updated: 2022/05/17 01:50:59 by sarchoi          ###   ########seoul.kr   #
+#    Updated: 2022/05/17 01:54:04 by sarchoi          ###   ########seoul.kr   #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,11 +27,11 @@ reset:=$(shell tput sgr0)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LIBFT_FLAGS) $(READLINE_FLAGS)
+	$(CC) $(CFLAGS) -o $@ $(OBJS)
 	$(info $(green)<MAKE> NAME$(reset))
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@ $(INC_FLAGS)
+	$(CC) $(CFLAGS) -c $< -o $@
 	$(info $(green)<MAKE> $(<) -> $(@)$(reset))
 
 clean:
