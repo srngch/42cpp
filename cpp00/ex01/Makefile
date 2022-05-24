@@ -6,7 +6,7 @@
 #    By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/22 22:29:18 by sarchoi           #+#    #+#              #
-#    Updated: 2022/05/22 22:29:19 by sarchoi          ###   ########seoul.kr   #
+#    Updated: 2022/05/24 18:35:49 by sarchoi          ###   ########seoul.kr   #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS = main.cpp PhoneBook.cpp Contact.cpp
-OBJS = $(SRCS:.c=.o)
+OBJS = $(SRCS:.cpp=.o)
 
 green:=$(shell tput setaf 2)
 reset:=$(shell tput sgr0)

@@ -6,7 +6,7 @@
 #    By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/17 00:46:02 by sarchoi           #+#    #+#              #
-#    Updated: 2022/05/17 01:54:04 by sarchoi          ###   ########seoul.kr   #
+#    Updated: 2022/05/24 18:39:20 by sarchoi          ###   ########seoul.kr   #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS = megaphone.cpp
 
-OBJS = $(SRCS:.c=.o)
+OBJS = $(SRCS:.cpp=.o)
 
 green:=$(shell tput setaf 2)
 reset:=$(shell tput sgr0)

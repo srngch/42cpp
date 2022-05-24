@@ -6,7 +6,7 @@
 #    By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/23 18:46:42 by sarchoi           #+#    #+#              #
-#    Updated: 2022/05/23 18:46:46 by sarchoi          ###   ########seoul.kr   #
+#    Updated: 2022/05/24 18:39:43 by sarchoi          ###   ########seoul.kr   #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS = tests.cpp Account.cpp
-OBJS = $(SRCS:.c=.o)
+OBJS = $(SRCS:.cpp=.o)
 
 green:=$(shell tput setaf 2)
 reset:=$(shell tput sgr0)
