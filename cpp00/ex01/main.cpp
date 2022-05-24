@@ -6,7 +6,7 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/22 22:29:22 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/05/22 22:30:18 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/05/24 18:36:20 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int main(void) {
 			phonebook.add();
 		else if (command == "SEARCH")
 			phonebook.search();
-		else if (command == "EXIT")
+		else if (command == "EXIT" || std::cin.eof())
 			break;
 		else
 			std::cout << "Unknown command" << std::endl;
