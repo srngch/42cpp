@@ -6,16 +6,16 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/22 22:29:27 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/05/22 22:29:28 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/05/25 22:48:10 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __PHONEBOOK_H__
 #define __PHONEBOOK_H__
 
-#include <iostream>
-#include <iomanip>
-#include <string>
+#define MAX_CONTACT 8
+#define MAX_FIELD_LEN 10
+
 #include "Contact.hpp"
 
 class PhoneBook {

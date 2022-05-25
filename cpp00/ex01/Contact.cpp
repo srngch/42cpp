@@ -6,10 +6,12 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 18:46:10 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/05/23 18:46:13 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/05/25 22:36:18 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
+#include <iomanip>
 #include "Contact.hpp"
 
 Contact::Contact()
