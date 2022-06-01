@@ -6,7 +6,7 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 21:29:37 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/02 00:50:58 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/06/02 02:37:19 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 
 ClapTrap::ClapTrap() {
 	std::cout << "ClapTrap default constructor called" << std::endl;
-	this->hit_points = MAX_HIT_POINTS;
-	this->energy_points = MAX_ENERGY_POINTS;
-	this->attack_damage = 0;
+	this->hit_points = CLAPTRAP_MAX_HIT_POINTS;
+	this->energy_points = CLAPTRAP_MAX_ENERGY_POINTS;
+	this->attack_damage = CLAPTRAP_MAX_ATTACK_DAMAGE;
 }
 
 ClapTrap::ClapTrap(std::string name) {
 	std::cout << "ClapTrap " << name << " constructed!" << std::endl;
 	this->name = name;
-	this->hit_points = MAX_HIT_POINTS;
-	this->energy_points = MAX_ENERGY_POINTS;
-	this->attack_damage = 0;
+	this->hit_points = CLAPTRAP_MAX_HIT_POINTS;
+	this->energy_points = CLAPTRAP_MAX_ENERGY_POINTS;
+	this->attack_damage = CLAPTRAP_MAX_ATTACK_DAMAGE;
 }
 
 ClapTrap::ClapTrap(ClapTrap const & src) {
@@ -72,8 +72,8 @@ void ClapTrap::beRepaired(unsigned int amount) {
 	}
 	std::cout << "ClapTrap " << this->name << " is repaired " << amount << " points" << std::endl;
 	this->hit_points += amount;
-	if (this->hit_points > MAX_HIT_POINTS)
-		this->hit_points = MAX_HIT_POINTS;
+	if (this->hit_points > CLAPTRAP_MAX_HIT_POINTS)
+		this->hit_points = CLAPTRAP_MAX_HIT_POINTS;
 	this->energy_points--;
 }
 
