@@ -6,7 +6,7 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 02:15:44 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/02 02:26:49 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/06/03 23:41:00 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,6 @@ public:
 	FragTrap(FragTrap const & src);
 	FragTrap & operator=(FragTrap const & rhs);
 	~FragTrap();
-
-	void attack(const std::string & target);
-	void takeDamage(unsigned int amount);
-	void beRepaired(unsigned int amount);
-
-	void showStatus();
 
 	void highFivesGuys();
 };

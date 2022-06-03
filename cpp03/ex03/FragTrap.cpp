@@ -6,7 +6,7 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 02:15:45 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/03 21:44:00 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/06/04 00:02:48 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,26 +33,27 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name) {
 }
 
 FragTrap::FragTrap(FragTrap const & src){
-	std::cout << "FragTrap " << src.name << " copied!" << std::endl;
+	std::cout << "FragTrap " << src.getName() << " copied!" << std::endl;
 	*this = src;
 }
 
 FragTrap & FragTrap::operator=(FragTrap const & rhs) {
 	std::cout << "FragTrap " << rhs.name << " assigned!" << std::endl;
 	if (this != &rhs) {
-		this->name = rhs.name;
-		this->hit_points = rhs.hit_points;
-		this->energy_points = rhs.energy_points;
-		this->attack_damage = rhs.attack_damage;
+		this->setName(rhs.getName());
+		this->setMaxHitPoints(rhs.getMaxHitPoints());
+		this->setHitPoints(rhs.getHitPoints());
+		this->setEnergyPoints(rhs.getEnergyPoints());
+		this->setAttackDamage(rhs.getAttackDamage());
 	}
 	return *this;
 }
 
 FragTrap::~FragTrap(void) {
-	std::cout << "FragTrap " << this->name << " destroyed!" << std::endl;
+	std::cout << "FragTrap " << this->getName() << " destroyed!" << std::endl;
 }
 
 void FragTrap::highFivesGuys() {
-	std::cout << "FragTrap " << this->name << " high-fives guys!" << std::endl;
-	this->energy_points--;
+	std::cout << "FragTrap " << this->getName() << " high-fives guys!" << std::endl;
+	this->setEnergyPoints(this->getEnergyPoints() - 1);
 }
