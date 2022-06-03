@@ -6,7 +6,7 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 01:36:21 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/03 23:55:43 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/06/04 00:13:00 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ ScavTrap & ScavTrap::operator=(ScavTrap const & rhs) {
 		this->setMaxHitPoints(rhs.getMaxHitPoints());
 		this->setHitPoints(rhs.getHitPoints());
 		this->setEnergyPoints(rhs.getEnergyPoints());
-		this->setMaxEnergyPoints(rhs.getMaxEnergyPoints());
+		this->setAttackDamage(rhs.getAttackDamage());
 	}
 	return *this;
 }
