@@ -6,7 +6,7 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 01:36:10 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/02 02:21:46 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/06/03 23:56:06 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,6 @@ public:
 	~ScavTrap();
 
 	void attack(const std::string & target);
-	void takeDamage(unsigned int amount);
-	void beRepaired(unsigned int amount);
-
-	void showStatus();
 
 	void guardGate();
 };

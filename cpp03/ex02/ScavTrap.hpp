@@ -6,7 +6,7 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 01:36:10 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/02 01:58:13 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/06/03 23:44:58 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #define SCAVTRAP_MAX_HIT_POINTS 100
 #define SCAVTRAP_MAX_ENERGY_POINTS 50
+#define SCAVTRAP_MAX_ATTACK_DAMAGE 20
 
 #include <string>
 #include "ClapTrap.hpp"
@@ -28,10 +29,6 @@ public:
 	~ScavTrap();
 
 	void attack(const std::string & target);
-	void takeDamage(unsigned int amount);
-	void beRepaired(unsigned int amount);
-
-	void showStatus();
 
 	void guardGate();
 };
