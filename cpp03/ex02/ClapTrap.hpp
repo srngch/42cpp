@@ -6,7 +6,7 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 01:36:08 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/02 02:38:27 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/06/03 23:38:48 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 class ClapTrap {
 protected:
 	std::string name;
+	int max_hit_points; // health
 	int hit_points; // health
 	int energy_points; // energy
 	int attack_damage; // power
@@ -32,6 +33,18 @@ public:
 	ClapTrap(ClapTrap const & src);
 	ClapTrap & operator=(ClapTrap const & rhs);
 	~ClapTrap();
+
+	std::string getName() const;
+	int getMaxHitPoints() const;
+	int getHitPoints() const;
+	int getEnergyPoints() const;
+	int getAttackDamage() const;
+
+	void setName(std::string name);
+	void setMaxHitPoints(int max_hit_points);
+	void setHitPoints(int hit_points);
+	void setEnergyPoints(int energy_points);
+	void setAttackDamage(int attack_damage);
 
 	void attack(const std::string & target);
 	void takeDamage(unsigned int amount);
