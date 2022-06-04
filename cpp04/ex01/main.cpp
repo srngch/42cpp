@@ -6,7 +6,7 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 21:09:13 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/05 00:40:20 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/06/05 02:14:31 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@
 #define IDEAS_LENGTH 100
 
 int main(void) {
+	{
+		const Animal* animal = new Animal();
+
+		delete animal;
+	}
+	std::cout << "----------------------------" << std::endl;
 	{
 		const Animal* dog = new Dog();
 		const Animal* cat = new Cat();
