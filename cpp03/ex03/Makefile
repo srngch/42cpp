@@ -29,7 +29,7 @@ $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) -I . -o $@ $(OBJS)
 	$(info $(green)<MAKE> NAME$(reset))
 
-%.o: %.c
+%.o: %.cpp
 	$(CC) $(CFLAGS) -I . -c $< -o $@
 	$(info $(green)<MAKE> $(<) -> $(@)$(reset))
 

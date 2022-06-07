@@ -6,7 +6,7 @@
 #    By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/01 21:29:08 by sarchoi           #+#    #+#              #
-#    Updated: 2022/06/01 21:59:32 by sarchoi          ###   ########seoul.kr   #
+#    Updated: 2022/06/07 18:39:56 by sarchoi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) -I . -o $@ $(OBJS)
 	$(info $(green)<MAKE> NAME$(reset))
 
-%.o: %.c
+%.o: %.cpp
 	$(CC) $(CFLAGS) -I . -c $< -o $@
 	$(info $(green)<MAKE> $(<) -> $(@)$(reset))
 
