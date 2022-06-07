@@ -15,7 +15,7 @@
 NAME = interfaces
 
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS = main.cpp AMateria.cpp Ice.cpp Cure.cpp \
 	Character.cpp MateriaSource.cpp
@@ -30,11 +30,11 @@ reset:=$(shell tput sgr0)
 all: $(NAME)
 
 $(NAME): $(OBJS) $(INCS)
-	$(CC) $(CFLAGS) -I . -o $@ $(OBJS)
+	$(CC) $(CPPFLAGS) -I . -o $@ $(OBJS)
 	$(info $(green)<MAKE> NAME$(reset))
 
 %.o: %.cpp
-	$(CC) $(CFLAGS) -I . -c $< -o $@
+	$(CC) $(CPPFLAGS) -I . -c $< -o $@
 	$(info $(green)<MAKE> $(<) -> $(@)$(reset))
 
 clean:

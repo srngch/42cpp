@@ -15,7 +15,7 @@
 NAME = polymorphism
 
 CC = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 OBJS = $(SRCS:.cpp=.o)
@@ -26,11 +26,11 @@ reset:=$(shell tput sgr0)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -I . -o $@ $(OBJS)
+	$(CC) $(CPPFLAGS) -I . -o $@ $(OBJS)
 	$(info $(green)<MAKE> NAME$(reset))
 
 %.o: %.cpp
-	$(CC) $(CFLAGS) -I . -c $< -o $@
+	$(CC) $(CPPFLAGS) -I . -c $< -o $@
 	$(info $(green)<MAKE> $(<) -> $(@)$(reset))
 
 clean:
