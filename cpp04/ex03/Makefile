@@ -19,7 +19,6 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS = main.cpp AMateria.cpp Ice.cpp Cure.cpp \
 	Character.cpp MateriaSource.cpp
-# ICharacter.cpp IMateriaSource.cpp
 INCS = AMateria.hpp Ice.hpp Cure.hpp \
 	Character.hpp MateriaSource.hpp \
 	ICharacter.hpp IMateriaSource.hpp
@@ -34,7 +33,7 @@ $(NAME): $(OBJS) $(INCS)
 	$(CC) $(CFLAGS) -I . -o $@ $(OBJS)
 	$(info $(green)<MAKE> NAME$(reset))
 
-%.o: %.c
+%.o: %.cpp
 	$(CC) $(CFLAGS) -I . -c $< -o $@
 	$(info $(green)<MAKE> $(<) -> $(@)$(reset))
 
