@@ -6,7 +6,7 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 17:59:22 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/09 14:03:24 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/06/09 15:17:42 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@ MateriaSource::MateriaSource(MateriaSource const & src) {
 MateriaSource & MateriaSource::operator=(MateriaSource const & rhs) {
 	if (this != &rhs) {
 		for (int i = 0; i < MATERIAS_SIZE; i++) {
-			if (this->materias[i] != NULL)
-				delete this->materias[i];
 			if (rhs.materias[i] != NULL)
 				this->materias[i] = rhs.materias[i]->clone();
 			else
