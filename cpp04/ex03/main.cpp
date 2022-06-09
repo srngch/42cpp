@@ -6,7 +6,7 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/05 02:39:39 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/06 00:41:18 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/06/09 14:07:25 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,21 @@ int main(void) {
 		delete me;
 		delete copiedMe;
 		delete src;
+	}
+	std::cout << "---------------" << std::endl;
+	{
+		std::cout << "<Test: Copy MateriaSource Class>" << std::endl;
+		IMateriaSource* src = new MateriaSource();
+		src->learnMateria(new Ice());
+		src->learnMateria(new Cure());
+
+		src->showMaterias();
+		IMateriaSource* copiedSrc = new MateriaSource(static_cast<MateriaSource const &>(*src));
+		std::cout << "Copy src" << std::endl;
+		copiedSrc->showMaterias();
+
+		delete src;
+		delete copiedSrc;
 	}
 	return 0;
 }
