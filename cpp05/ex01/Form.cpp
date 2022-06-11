@@ -6,7 +6,7 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 15:37:29 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/11 16:17:03 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/06/11 18:29:42 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,9 @@ Form::Form(const std::string name, int gradeToSign, int gradeToExecute): name(na
 	}
 	catch (Form::GradeTooHighException & e) {
 		std::cout << e.what() << std::endl;
-		exit(EXIT_FAILURE);
 	}
 	catch (Form::GradeTooLowException & e) {
 		std::cout << e.what() << std::endl;
-		exit(EXIT_FAILURE);
 	}
 }
 
