@@ -6,7 +6,7 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 03:43:44 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/11 03:43:45 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/06/11 18:34:41 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,9 @@ Bureaucrat::Bureaucrat(const std::string name, int grade): name(name), grade(gra
 	}
 	catch (Bureaucrat::GradeTooHighException & e) {
 		std::cout << e.what() << std::endl;
-		exit(EXIT_FAILURE);
 	}
 	catch (Bureaucrat::GradeTooLowException & e) {
 		std::cout << e.what() << std::endl;
-		exit(EXIT_FAILURE);
 	}
 }
 
@@ -75,7 +73,6 @@ void Bureaucrat::incrementGrade(void) {
 	}
 	catch (Bureaucrat::GradeTooHighException & e) {
 		std::cout << e.what() << std::endl;
-		exit(EXIT_FAILURE);
 	}
 }
 
@@ -87,7 +84,6 @@ void Bureaucrat::decrementGrade(void) {
 	}
 	catch (Bureaucrat::GradeTooLowException & e) {
 		std::cout << e.what() << std::endl;
-		exit(EXIT_FAILURE);
 	}
 }
 
