@@ -6,7 +6,7 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 01:55:17 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/19 02:19:16 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/06/19 15:24:51 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 #include "C.hpp"
 
 Base * generate() {
-	srand(time(NULL));
 	int n = rand() % 3;
 	std::cout << "n = " << n << std::endl;
 	if (n == 0)
@@ -64,6 +63,8 @@ void identify(Base& p) {
 }
 
 int main() {
+	srand(time(NULL));
+
 	Base *p = generate();
 	identify(p);
 	identify(*p);
