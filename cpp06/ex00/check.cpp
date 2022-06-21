@@ -6,7 +6,7 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 01:22:45 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/21 19:18:27 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/06/21 19:39:56 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ bool is_double(std::string const &str)
 		double d = std::stod(str);
 		bool has_valid_char = str.find_first_not_of("0123456789+-f.") == std::string::npos;
 		bool has_one_dot = str.find_first_of(".") == str.find_last_of(".");
-		bool is_in_range = std::numeric_limits<double>::min() <= d && d <= std::numeric_limits<double>::max();
+		bool is_in_range = (std::numeric_limits<double>::min() <= d && d <= std::numeric_limits<double>::max()) || d == 0;
 		return (has_valid_char && has_one_dot && is_in_range);
 	} catch (std::exception &e) {
 		return (false);
