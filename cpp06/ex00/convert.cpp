@@ -6,13 +6,13 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 01:22:40 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/21 19:13:05 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/06/21 19:23:57 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
 
-#define PRECISION_LENGTH 3
+#define PRECISION_LENGTH 1
 
 void convert_pseudo_literal(std::string const &str) {
 	if (str.compare("inff") == 0 || str.compare("inf") == 0) {
@@ -47,7 +47,7 @@ void convert_char(char const &c) {
 		std::cout.precision(PRECISION_LENGTH);
 	}
 
-	if (d < CHAR_MIN || CHAR_MAX < d)
+	if (c < CHAR_MIN || CHAR_MAX < c)
 		std::cout << "char: overflow" << std::endl;
 	else if (!std::isprint(d))
 		std::cout << "char: Non displayable" << std::endl;
@@ -67,8 +67,8 @@ void convert(std::string const &str) {
 	double d = std::stod(str);
 	double under_point = std::fmod(d, 1.0);
 
+	std::cout << std::fixed;
 	if (under_point == 0.0) {
-		std::cout.setf(std::ios::showpoint);
 		std::cout.precision(PRECISION_LENGTH);
 	}
 

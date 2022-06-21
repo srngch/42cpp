@@ -6,7 +6,7 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 01:22:45 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/21 19:14:23 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/06/21 19:18:27 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,8 @@ bool is_pseudo_literal(std::string const &str) {
 
 bool is_char(std::string const &str) {
 	bool is_valid_length = str.length() == 1;
-	bool is_in_range = std::numeric_limits<char>::min() <= str[1] && str[1] <= std::numeric_limits<char>::max();
+	bool is_in_range = std::numeric_limits<char>::min() <= str.at(0) && str.at(0) <= std::numeric_limits<char>::max();
 	bool is_printable = std::isalpha(str.at(0));
-	// return (is_valid_length && is_formatted && is_in_range && is_printable);
 	return (is_valid_length && is_in_range && is_printable);
 }
 
