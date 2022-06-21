@@ -6,7 +6,7 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 01:22:30 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/19 01:22:31 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/06/21 19:13:56 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,19 @@ int main(int argc, char **argv) {
 		return (1);
 	}
 
-	type t = checkType(argv[1]);
+	std::string str = argv[1];
+	type t = checkType(str);
 	switch (t) {
 		case CHAR:
+			convert_char(str.at(0));
+			break;
 		case INT:
 		case FLOAT:
 		case DOUBLE:
-			convert(argv[1]);
+			convert(str);
 			break;
 		case PSEUDO_LITERAL:
-			convert_pseudo_literal(argv[1]);
+			convert_pseudo_literal(str);
 			break;
 		default:
 			std::cout << "Unknown scalar type" << std::endl;

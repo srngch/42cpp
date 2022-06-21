@@ -6,7 +6,7 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 01:22:40 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/19 01:31:12 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/06/21 19:13:05 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,31 @@ void convert_pseudo_literal(std::string const &str) {
 		std::cout << "double: nan" << std::endl;
 		return;
 	}
+}
+
+void convert_char(char const &c) {
+	double d = static_cast<double>(c);
+	double under_point = std::fmod(d, 1.0);
+
+	if (under_point == 0.0) {
+		std::cout.setf(std::ios::showpoint);
+		std::cout.precision(PRECISION_LENGTH);
+	}
+
+	if (d < CHAR_MIN || CHAR_MAX < d)
+		std::cout << "char: overflow" << std::endl;
+	else if (!std::isprint(d))
+		std::cout << "char: Non displayable" << std::endl;
+	else
+		std::cout << "char: " << static_cast<char>(d) << std::endl;
+
+	if (d < INT_MIN || INT_MAX < d)
+		std::cout << "int: overflow" << std::endl;
+	else
+		std::cout << "int: " << static_cast<int>(d) << std::endl;
+
+	std::cout << "float: " << static_cast<float>(d) << "f" << std::endl;
+	std::cout << "double: " << d << std::endl;
 }
 
 void convert(std::string const &str) {
