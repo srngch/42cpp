@@ -6,15 +6,13 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 15:41:19 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/29 00:43:16 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/06/29 00:45:45 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stack>
 #include <list>
 #include "MutantStack.hpp"
-
-#include <deque>
 
 int main()
 {
