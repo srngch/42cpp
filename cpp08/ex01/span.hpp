@@ -6,12 +6,12 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 01:55:33 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/27 01:55:33 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/06/28 15:42:06 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __SPAN_H__
-#define __SPAN_H__
+#ifndef __SPAN_HPP__
+#define __SPAN_HPP__
 
 #include <iostream>
 #include <vector>
@@ -40,4 +40,4 @@ public:
 
 std::ostream & operator<<(std::ostream & o, Span const & rhs);
 
-#endif /* __SPAN_H__ */
+#endif /* __SPAN_HPP__ */
