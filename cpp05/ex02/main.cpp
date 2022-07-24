@@ -6,7 +6,7 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 15:37:26 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/12 01:29:58 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/07/24 21:50:39 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ int main(void) {
 		Form *f = new ShrubberyCreationForm("home");
 
 		b.signForm(*f);
+
+		delete f;
 	}
 	std::cout << "-----------------------------" << std::endl;
 	{
@@ -73,6 +75,8 @@ int main(void) {
 
 		b.signForm(*f);
 		b.executeForm(*f);
+
+		delete f;
 	}
 	return 0;
 }
