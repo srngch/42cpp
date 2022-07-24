@@ -6,7 +6,7 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 17:48:27 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/04 20:55:14 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/07/24 21:46:09 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 	Animal();
 	Animal(Animal const & src);
 	Animal & operator=(Animal const & rhs);
-	~Animal();
+	virtual ~Animal();
 
 	std::string getType() const;
 	void setType(std::string type);

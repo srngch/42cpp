@@ -6,7 +6,7 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 17:45:51 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/04 18:22:28 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/07/24 21:46:32 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,10 @@ int main(void) {
 		i->makeSound();
 		j->makeSound();
 		meta->makeSound();
+
+		delete i;
+		delete j;
+		delete meta;
 	}
 	std::cout << "---------" << std::endl;
 	{
@@ -37,6 +41,9 @@ int main(void) {
 		std::cout << i->getType() << " " << std::endl;
 		i->makeSound();
 		meta->makeSound();
+
+		delete i;
+		delete meta;
 	}
 
 	return 0;

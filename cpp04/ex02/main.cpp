@@ -6,7 +6,7 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 21:09:13 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/05 02:27:44 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/07/24 21:49:11 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ int main(void) {
 		std::cout << "2. " << dog2->getBrain()->getIdea(2) << std::endl;
 
 		delete dog;
+		delete dog2;
 	}
 	std::cout << "----------------------------" << std::endl;
 	{
