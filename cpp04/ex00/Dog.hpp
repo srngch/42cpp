@@ -6,7 +6,7 @@
 /*   By: sarchoi <sarchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/04 17:55:18 by sarchoi           #+#    #+#             */
-/*   Updated: 2022/06/04 20:55:16 by sarchoi          ###   ########seoul.kr  */
+/*   Updated: 2022/07/24 21:46:14 by sarchoi          ###   ########seoul.kr  */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public:
 	Dog();
 	Dog(Dog const & src);
 	Dog & operator=(Dog const & rhs);
-	~Dog();
+	virtual ~Dog();
 
 	virtual void makeSound() const;
 };
